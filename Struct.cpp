@@ -1,4 +1,4 @@
-// Liczenie czasu podr�y
+// Liczenie czasu podróży
 
 #include <iostream>
 
@@ -22,9 +22,14 @@ int main(){
 	
 	travel_time day1={5, 45};
 	travel_time day2={4, 55};
+	travel_time day3={4, 25};
 	
-	travel_time trip=sum(day1, day2);
+	travel_time trip1=sum(day1, day2);
+	show_time(trip1);
 	
+	travel_time trip2=sum(trip1,day3);
+	cout<<"Suma 3 dni: ";
+	show_time(trip2);
 	
 	return 0;
 }
@@ -37,4 +42,8 @@ travel_time sum(travel_time t1, travel_time t2){
 	
 	return total;
 	}
-
+	
+void show_time(travel_time t)
+{
+	cout<<t.hours<<" godzin, "<<t.mins<<" minut"<<endl;
+}
