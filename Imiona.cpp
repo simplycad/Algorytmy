@@ -38,7 +38,7 @@ int main(){
 		}
 	
 	else{
-	cout<<"B³¹d programu"; 
+	cout<<"BÂ³Â¹d programu"; 
 	return 99;
 	}
 	
