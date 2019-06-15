@@ -1,3 +1,5 @@
+// Program importuje oraz prządkuje imiona z pliku imiona.in
+
 #include <iostream>
 #include <fstream>
 #include <string>
