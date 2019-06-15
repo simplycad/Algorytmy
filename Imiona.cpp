@@ -27,6 +27,7 @@ int main(){
 	 			iZnakM = find(imie.begin(),imie.end(),'-');
 			}
 			
+			
 			for (int i=1;i<imie.size();i++)	{
 				imie[i]	= tolower(imie[i]);
 				imie[0] = toupper(imie[0]);	}
@@ -40,19 +41,26 @@ int main(){
 		}
 	
 	else{
-	cout<<"B³¹d programu"; 
+	cout<<"Błąd programu"; 
 	return 99;
 	}
 	
 	sort(imiona.begin(), imiona.end()); //sortowanie include <algorithm>
-	for(int i=0; i<imiona.size(); i++){
-		
-		cout<<imiona[i]<<endl;
-	}
+	cout<<imiona[0]<<endl;
 	
+	for(int i=1; i<imiona.size(); i++)
+		
+			if (imiona[i-1] != imiona[i])
+			cout<<imiona[i]<<endl;
+		
+		ofstream listaI("imiona2.txt");
+		listaI<<imiona[0]<<endl;
+	
+	for(int i=1; i<imiona.size(); i++)
+		
+			if (imiona[i-1] != imiona[i])
+			listaI<<imiona[i]<<endl;
+		
+		
 	return 0;
 }
-
-
-// import danych
-// lista , uporzadkowac
